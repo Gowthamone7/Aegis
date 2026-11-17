@@ -1,5 +1,5 @@
 
-# Engineering Knowledge Agent (DevGuard + CodeGuard)
+# Aegis (DevGuard + CodeGuard)
 **Trustworthy Agentic AI for Automated CI/CD Incident Diagnosis & Remediation**
 
 - **Student:** Gowtham M S (Final-Year B.Tech CSE, REVA University)
