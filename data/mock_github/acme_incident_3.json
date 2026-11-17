@@ -1,0 +1,12 @@
+{
+  "incident_id": 3,
+  "tenant": "acme",
+  "title": "[EKA Fix] Missing npm Dependency",
+  "branch": "eka/incident-3",
+  "number": 45,
+  "url": "https://github.com/mock-acme/repo/pull/45",
+  "body": "## [EKA] Automated Diagnosis\nApproved by manager after partial confidence match.\n\n### Proposed Fix\n```\nSet the required environment variable in your .env file or deployment config.\n```\n\n### Citations\n- Manager sign-off",
+  "citations": [
+    "Manager sign-off"
+  ]
+}

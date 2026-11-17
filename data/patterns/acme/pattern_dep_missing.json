@@ -1,0 +1,7 @@
+{
+  "id": "acme-dep-001",
+  "title": "npm Dependency Not Found / Module Resolution Failure",
+  "text": "Symptom: Build or runtime fails with 'Cannot find module \\'<package-name>\\'' or 'npm ERR! 404 Not Found - GET https://registry.npmjs.org/<package>' or 'Error: Cannot find module' in Node.js.\n\nRoot Cause: package.json lists a dependency that is not installed (node_modules missing or outdated), private package registry misconfigured, or a package was removed from npm registry.\n\nDiagnosis Steps:\n1. Check error message for the exact module name\n2. Verify package.json contains the dependency under 'dependencies' or 'devDependencies'\n3. Check if node_modules directory exists and contains the package\n4. For CI: confirm cache is not stale — force clean install\n\nFix:\n- Run 'npm install' in the project root to install all listed dependencies\n- If package is missing from package.json: 'npm install <package-name> --save'\n- For Acme private packages: ensure .npmrc contains 'registry=https://npm.acme-internal.io' and NPM_TOKEN env var is set\n- Clear corrupted cache: 'npm cache clean --force && rm -rf node_modules && npm install'\n- In CI (GitHub Actions): ensure 'actions/setup-node' step runs before build step\n- Check package-lock.json is committed and matches package.json\n\nPrevention: Pin dependency versions; use 'npm ci' in CI for reproducible installs; set up Dependabot alerts.",
+  "page": 34,
+  "pdf_name": "acme-engineering-runbook-v3.pdf"
+}

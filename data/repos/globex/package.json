@@ -1,0 +1,16 @@
+{
+  "name": "globex-billing-service",
+  "version": "2.4.0",
+  "description": "Globex Corporation billing and payment engine",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5"
+  }
+}
+

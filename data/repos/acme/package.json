@@ -1,0 +1,27 @@
+{
+  "name": "acme-web-app",
+  "version": "1.0.0",
+  "description": "Acme Corp main web application",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest --forceExit",
+    "lint": "eslint src/"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "dotenv": "^16.0.0",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "nodemon": "^3.0.0",
+    "eslint": "^8.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "number": 139,
+  "title": "[EKA Fix] Out of Memory Fix",
+  "branch": "eka/fix-oom-1",
+  "base": "main",
+  "tenant": "acme",
+  "incident_id": 99,
+  "url": "https://github.com/acme/web-app/pull/139",
+  "html_url": "https://github.com/acme/web-app/pull/139",
+  "body": "Remediation patch",
+  "state": "open",
+  "mock": true
+}

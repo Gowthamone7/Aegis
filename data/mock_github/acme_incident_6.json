@@ -1,0 +1,12 @@
+{
+  "incident_id": 6,
+  "tenant": "acme",
+  "title": "[EKA Fix] OutOfMemory Heap Error",
+  "branch": "eka/incident-6",
+  "number": 48,
+  "url": "https://github.com/mock-acme/repo/pull/48",
+  "body": "## [EKA] Automated Diagnosis\nApproved by manager after partial confidence match.\n\n### Proposed Fix\n```\nIncrease JVM heap with -Xmx flag (e.g., -Xmx2g) or profile heap usage.\n```\n\n### Citations\n- Manager sign-off",
+  "citations": [
+    "Manager sign-off"
+  ]
+}

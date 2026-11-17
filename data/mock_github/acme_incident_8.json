@@ -1,0 +1,12 @@
+{
+  "incident_id": 8,
+  "tenant": "acme",
+  "title": "[EKA Fix] OutOfMemory Heap Error",
+  "branch": "eka/incident-8",
+  "number": 50,
+  "url": "https://github.com/mock-acme/repo/pull/50",
+  "body": "## [EKA] Automated Diagnosis\nApproved by manager after partial confidence match.\n\n### Proposed Fix\n```\nIncrease container JVM allocation via -Xmx flag (e.g., -Xms512m -Xmx2048m -XX:+UseG1GC) and enable HeapDumpOnOutOfMemoryError.\n```\n\n### Citations\n- Manager sign-off",
+  "citations": [
+    "Manager sign-off"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "id": "acme-port-001",
+  "title": "EADDRINUSE: Port Already In Use",
+  "text": "Symptom: Server fails to start with 'Error: listen EADDRINUSE: address already in use :::3000' (or other port number). The process cannot bind to the requested port because another process is already listening on it.\n\nRoot Cause: A previous instance of the application did not shut down cleanly (zombie process), another service on the same machine is using the port, or a development server was not terminated before restarting.\n\nDiagnosis Steps:\n1. Identify which port is in conflict from the error message\n2. Find the process occupying the port:\n   - Linux/Mac: 'lsof -i :<PORT>' or 'ss -tlnp | grep <PORT>'\n   - Windows: 'netstat -ano | findstr :<PORT>'\n3. Check the PID of the occupying process\n\nFix:\n- Kill the process using the port:\n  - Linux/Mac: 'kill -9 <PID>' or 'npx kill-port <PORT>'\n  - Windows: 'taskkill /F /PID <PID>'\n- Change the application port via environment variable: PORT=3001 npm start\n- For Acme deployments: update PORT in .env or Kubernetes Service targetPort\n- In Docker: map to a different host port: '-p 3001:3000'\n\nIf this happens repeatedly in CI: add a pre-test step to kill any lingering processes on the target port.\n\nPrevention: Use process managers (PM2, supervisord) with proper signal handling; implement graceful shutdown (process.on('SIGTERM', ...)).",
+  "page": 61,
+  "pdf_name": "acme-engineering-runbook-v3.pdf"
+}

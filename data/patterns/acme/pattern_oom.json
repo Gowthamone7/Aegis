@@ -1,0 +1,7 @@
+{
+  "id": "acme-oom-001",
+  "title": "OutOfMemory Error: Java Heap Space Exhaustion",
+  "text": "Symptom: The application crashes with 'java.lang.OutOfMemoryError: Java heap space' or 'java.lang.OutOfMemoryError: GC overhead limit exceeded'. This occurs when the JVM cannot allocate an object because the heap is full and garbage collection is unable to free enough memory.\n\nRoot Cause: Insufficient JVM heap size configured for the workload, memory leak in application code retaining object references, or sudden spike in concurrent users/requests exceeding normal memory baseline.\n\nDiagnosis Steps:\n1. Check application logs for 'OutOfMemoryError' stack trace\n2. Review heap size settings: -Xms (initial) and -Xmx (maximum)\n3. Inspect GC logs for excessive collection frequency\n4. Use heap dump analysis (jmap -dump or -XX:+HeapDumpOnOutOfMemoryError) to identify retained objects\n\nFix:\n- Increase heap: add -Xmx2g (or appropriate size) to JVM_OPTS in Dockerfile or deployment config\n- For Acme deployments: update JAVA_OPTS in acme-web-app/config/jvm.properties\n- Check for memory leaks: static collections growing unboundedly, unclosed streams, event listener accumulation\n- Add -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/heapdump.hprof for future diagnostics\n- Monitor with: kubectl top pods -n acme-prod\n\nPrevention: Set resource limits in Kubernetes manifests; configure alerting on heap usage > 80%.",
+  "page": 12,
+  "pdf_name": "acme-engineering-runbook-v3.pdf"
+}
