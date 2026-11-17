@@ -1,3 +1,4 @@
+
 # Engineering Knowledge Agent (DevGuard + CodeGuard)
 **Trustworthy Agentic AI for Automated CI/CD Incident Diagnosis & Remediation**
 
@@ -113,4 +114,8 @@ Run the full pytest suite:
 python -m pytest C:\RIO\engineering-knowledge-agent\ai-service\tests
 ```
 **Result:** 26/26 tests passing (100% green).
+
+=======
+# Aegis
+Detect CI/CD failures. Investigate root causes. Identify security threats. Recommend code fixes. Safely control automated remediation.
 
