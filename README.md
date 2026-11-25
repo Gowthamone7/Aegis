@@ -2,7 +2,10 @@
 # Aegis (DevGuard + CodeGuard)
 **Trustworthy Agentic AI for Automated CI/CD Incident Diagnosis & Remediation**
 
-- **Student:** Gowtham M S (Final-Year B.Tech CSE, REVA University)
+- **Students:** Gowtham M S (Final-Year B.Tech CSE, REVA University),
+-               Gowtham K C (Final-Year B.Tech CSE, REVA University),
+-               Jayaprakash L (Final-Year B.Tech CSE, REVA University),
+-               Ganesh Hugar (Final-Year B.Tech CSE, REVA University).
 - **Activity:** RIO Student Activity 01 - Project Onboarding & Prototype Implementation
 - **Supervisor:** Ravindra Kumar Agriya
 - **Date:** 13-14 November 2026
